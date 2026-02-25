@@ -5,7 +5,8 @@ void setup() {
   Serial.begin(9600);
 }
 
+//this doesnt seem to exhibit the 60 Hz-ish interference
+
 void loop() {
-  // Hello world
-  // this should be in interference
+  Serial.println(analogRead(PDIODE));
 }
