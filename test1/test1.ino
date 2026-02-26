@@ -1,3 +1,12 @@
 const int PDIODE = 34;
 
-// this should be on main branch
+void setup() {
+  pinMode(PDIODE,INPUT);
+  Serial.begin(9600);
+}
+
+//this doesnt seem to exhibit the 60 Hz-ish interference
+
+void loop() {
+  Serial.println(analogRead(PDIODE));
+}
