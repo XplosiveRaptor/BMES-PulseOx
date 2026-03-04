@@ -11,10 +11,17 @@ void setup() {
 }
 
 void loop() {
+  printAll();
+}
+
+void printAll(bool println = 0) {
   // Print the direct ADC reading from each pin
-  for(int i = 0; i < num_pins-1; i++) {
+  // bool println can be used as an integer 1 or 0
+  for(int i = 0; i < num_pins - println; i++) {
     Serial.print(analogRead(PINS[i]));
     Serial.print(",");
   }
-  Serial.println(analogRead(PINS[num_pins-1]));
+  if (println) {
+    Serial.println(analogRead(PINS[num_pins-1]));
+  }
 }
