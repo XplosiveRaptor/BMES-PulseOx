@@ -1,5 +1,5 @@
 // Simply put the pins to be read in the array
-const int PINS[] = {34,35,32};
+const int PINS[] = {32,34,35};
 const int num_pins = sizeof(PINS) / sizeof(PINS[0]);
 
 void setup() {
